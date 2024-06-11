@@ -1,0 +1,62 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+
+# Compiled class files
+target/
+*/target/
+
+# Package files
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Temporary files
+*.tmp
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Maven directory
+.mvn/
+
+# Spring Boot application properties
+src/main/resources/application.properties

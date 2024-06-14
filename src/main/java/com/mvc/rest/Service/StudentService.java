@@ -12,19 +12,29 @@ public class StudentService {
 
     @Autowired
     StudentRepo studentRepo;
-    public void registerStudent(Student student) {
+    public List<Student> getHomepage() {
+        return studentRepo.findAll();
+    }
+    public Student registerStudent(Student student) {
         studentRepo.save(student);
+        return student;
     }
     public List<Student> getStudentsByAddress(String address) {
-        return studentRepo.findByAddress(address);
+        return studentRepo.findStudentsByAddress(address);
     }
-    public void deleteStudent(int id) {
-        studentRepo.deleteById(id);
-    }
+
     public Student getStudentById(int id) {
         return studentRepo.findById(id).get();
     }
-    public void updateStudent(Student student) {
-        studentRepo.save(student);
+
+    public void deleteStudentById(int id) {
+        studentRepo.deleteById(id);
+    }
+    public Student updateStudent(int id, Student studentDetails) {
+        Student student = studentRepo.findById(id).orElseThrow(() -> new RuntimeException("Student not found"));
+        student.setFirstname(studentDetails.getFirstname());
+        student.setLastname(studentDetails.getLastname());
+        student.setAddress(studentDetails.getAddress());
+        return studentRepo.save(student);
     }
 }

@@ -1,4 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,14 +5,37 @@
     <title>Title</title>
 </head>
 <body>
-<%--<p>register</p>--%>
-<%--${message}<br>--%>
-<%--<form action="register" method="post">--%>
-<%--    firstname<input type="text" placeholder="firstname" name="firstname"><br>--%>
-<%--    lastname<input type="text" placeholder="lastname" name="lastname"><br>--%>
-<%--    address<input type="text" placeholder="address" name="address"><br>--%>
-<%--    <button type="submit">Submit</button>--%>
-<%--</form>--%>
+<div>
+    <h1>List of Students</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Email</th>
+        </tr>
+        <c:forEach var="student" items="${students}">
+            <tr>
+                <td>${student.id}</td>
+                <td>${student.name}</td>
+                <td>${student.address}</td>
+                <td>${student.email}</td>
+            </tr>
+        </c:forEach>
+    </table>
+</div>
+<div>
+    <h1>Register New Student</h1>
+    <form action="/students/register" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address"><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br>
+        <button type="submit">Register</button>
+    </form>
+</div>
 <%--<form action="searchByAddress">--%>
 <%--    <h1>Search by Address--%>
 <%--    </h1>--%>
@@ -28,10 +50,10 @@
 <%--    <button type="submit">delete</button>--%>
 <%--</form>--%>
 
-<form action="searchById">
-    <h2>Search by id</h2>
-    Student id:<input type="number" name="id">
-    <input type="submit">
-</form>
+<%--<form action="searchById">--%>
+<%--    <h2>Search by id</h2>--%>
+<%--    Student id:<input type="number" name="id">--%>
+<%--    <input type="submit">--%>
+<%--</form>--%>
 </body>
 </html>

@@ -26,34 +26,35 @@
 </div>
 <div>
     <h1>Register New Student</h1>
-    <form action="/students/register" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br>
+    ${message}<br>
+    <form action="register" method="post">
+        <label for="firstname">firstname:</label>
+        <input type="text" id="firstname" name="firstname"><br>
+        <label for="lastname">lastname:</label>
+        <input type="text" id="lastname" name="lastname"><br>
         <label for="address">Address:</label>
         <input type="text" id="address" name="address"><br>
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email"><br>
         <button type="submit">Register</button>
     </form>
 </div>
-<%--<form action="searchByAddress">--%>
-<%--    <h1>Search by Address--%>
-<%--    </h1>--%>
-<%--    Student address:<input type="text" name="address">--%>
-<%--    <button type="submit">Search</button>--%>
-<%--</form>--%>
-<%--<form action="deleteById">--%>
-<%--    <h1>delete by id--%>
-<%--    </h1>--%>
-<%--    ${message1}<br>--%>
-<%--    Student id:<input type="number" name="id">--%>
-<%--    <button type="submit">delete</button>--%>
-<%--</form>--%>
+<form action="searchByAddress">
+    <h1>Search by Address
+    </h1>
+    Student address:<input type="text" name="address">
+    <button type="submit">Search</button>
+</form>
+<form action="deleteById">
+    <h1>delete by id
+    </h1>
+    ${message1}<br>
+    Student id:<input type="number" name="id">
+    <button type="submit">delete</button>
+</form>
 
-<%--<form action="searchById">--%>
-<%--    <h2>Search by id</h2>--%>
-<%--    Student id:<input type="number" name="id">--%>
-<%--    <input type="submit">--%>
-<%--</form>--%>
+<form action="searchById">
+    <h2>Search by id</h2>
+    Student id:<input type="number" name="id">
+    <input type="submit">
+</form>
 </body>
 </html>

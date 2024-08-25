@@ -8,7 +8,7 @@
 // import org.springframework.web.servlet.*;
 //
 // import java.util.List;
-//
+
 // @Controller
 // public class StudentController {
 //     @Autowired
@@ -17,6 +17,7 @@
 //     @RequestMapping("/")
 //     public ModelAndView  getHome() {
 //         ModelAndView mv=new ModelAndView();
+//         studentService.getHomepage();
 //         mv.setViewName("Home");
 //         return mv;
 //     }
@@ -40,7 +41,7 @@
 //     @RequestMapping("deleteById")
 //     public ModelAndView deleteStudent(@RequestParam("id") int id) {
 //         ModelAndView mv = new ModelAndView();
-//         studentService.deleteStudent(id);
+//         studentService.deleteStudentById(id);
 //         mv.addObject("message1", "student deleted");
 //         mv.setViewName("Home");
 //         return mv;
@@ -64,7 +65,7 @@
 //
 //     @RequestMapping(value = "updateStudent", method = RequestMethod.POST)
 //     public ModelAndView updateStudent(Student student) {
-//         studentService.updateStudent(student);
+//         studentService.updateStudent(student.getId(), student);
 //         return new ModelAndView("redirect:/searchById?id=" + student.getId());
 //     }
 // }

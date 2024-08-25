@@ -1,13 +1,14 @@
-// package com.mvc.rest.Controller;
-//
-// import com.mvc.rest.Entity.Student;
-// import com.mvc.rest.Service.StudentService;
-// import org.springframework.beans.factory.annotation.Autowired;
+ package com.mvc.rest.Controller;
+
+ import com.mvc.rest.Entity.Student;
+ import com.mvc.rest.Service.StudentService;
+ import org.springframework.beans.factory.annotation.Autowired;
 // import org.springframework.stereotype.*;
-// import org.springframework.web.bind.annotation.*;
+ import org.springframework.web.bind.annotation.*;
 // import org.springframework.web.servlet.*;
-//
-// import java.util.List;
+ import org.springframework.http.ResponseEntity;
+
+ import java.util.List;
 
 // @Controller
 // public class StudentController {
@@ -70,14 +71,6 @@
 //     }
 // }
 //spring.security.user.password=Test12345_
-package com.mvc.rest.Controller;
-
-import com.mvc.rest.Entity.Student;
-import com.mvc.rest.Service.StudentService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import java.util.List;
 
 @RestController
 @RequestMapping("/students")
